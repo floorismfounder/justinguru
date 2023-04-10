@@ -13,13 +13,6 @@ export default function Resume() {
           <h2>My Resume</h2>
           <hr />
           <div className={styles.section}>
-            <h3>Education</h3>
-            <ul>
-              <li>Bachelor's Degree in Computer Science, XYZ University</li>
-              <li>Master's Degree in Software Engineering, ABC University</li>
-            </ul>
-          </div>
-          <div className={styles.section}>
             <h3>Experience</h3>
             <ul>
               <li>Software Engineer, Company A (2019 - Present)</li>
@@ -29,8 +22,8 @@ export default function Resume() {
           <div className={styles.section}>
             <h3>Skills</h3>
             <ul>
-              <li>Programming languages: JavaScript, Python, Java</li>
-              <li>Frameworks: React, Node.js, Django</li>
+              <li>Programming languages: JavaScript</li>
+              <li>Frameworks: React, Node.js</li>
             </ul>
           </div>
         </div>
