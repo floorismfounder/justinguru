@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import { useState } from 'react';
-import styles from '@/styles/Contact.module.scss';
+import styles from '@/styles/contact.module.scss';
 
 export default function Contact() {
   const [name, setName] = useState('');
