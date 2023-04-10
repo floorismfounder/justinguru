@@ -1,39 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/index.module.scss'
-import Link from 'next/link'
-
-const inter = Inter({ subsets: ['latin'] })
+import Layout from '@/components/Layout';
+import styles from '@/styles/index.module.scss';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>My Portfolio</title>
-        <meta name="description" content="My portfolio site" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout title="My Portfolio">
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
-            Welcome to my portfolio site. Feel free to explore!
-          </p>
-          <div>
-            <Link href="/about">
-              <span>About</span>
-            </Link>
-            <Link href="/resume">
-              <span>Resume</span>
-            </Link>
-            <Link href="/contact">
-              <span>Contact</span>
-            </Link>
-            <Link href="/blog">
-              <span>Blog</span>
-            </Link>
-          </div>
+          <p>Welcome to my portfolio site. Feel free to explore!</p>
         </div>
 
         <div className={styles.center}>
@@ -46,8 +20,7 @@ export default function Home() {
             priority
           />
         </div>
-
       </main>
-    </>
-  )
+    </Layout>
+  );
 }

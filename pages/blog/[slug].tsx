@@ -1,43 +1,48 @@
-import Head from 'next/head';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { useRouter } from 'next/router';
+import Layout from '../../components/Layout';
+import { Post, getPostBySlug, getAllPostSlugs } from '../../lib/posts';
 
-type BlogPost = {
-  title: string;
-  content: string;
+type Props = {
+  post: Post;
 };
 
-type BlogPostProps = {
-  post: BlogPost;
-};
+const PostPage: React.FC<Props> = ({ post }) => {
+  const router = useRouter();
 
-export default function BlogPostPage({ post }: BlogPostProps) {
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-      <h1>{post.title}</h1>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
-    </>
+    <Layout title={post.frontmatter.title}>
+      <article>
+        <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.date}</p>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
+    </Layout>
   );
-}
-
-export const getStaticPaths = async () => {
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const postFilenames = fs.readdirSync(postsDirectory);
-  const slugs = postFilenames.map((filename) => filename.replace(/\.md$/, ''));
-  const paths = slugs.map((slug) => ({ params: { slug } }));
-  return { paths, fallback: false };
 };
 
-export const getStaticProps = async ({ params }: { params: { slug: string } }) => {
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const fullPath = path.join(postsDirectory, `${params.slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
-  const post = { title: data.title, content };
-  return { props: { post } };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = getAllPostSlugs().map((slug) => ({
+    params: { slug },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const slug = params?.slug as string;
+  const post = await getPostBySlug(slug);
+
+  return {
+    props: { post },
+  };
+};
+
+export default PostPage;

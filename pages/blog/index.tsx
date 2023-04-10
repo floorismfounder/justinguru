@@ -3,6 +3,7 @@ import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Layout from '@/components/Layout';
 
 type BlogPostSummary = {
   slug: string;
@@ -17,22 +18,21 @@ type BlogProps = {
 export default function Blog({ posts }: BlogProps) {
   return (
     <>
-      <Head>
-        <title>Blog</title>
-      </Head>
+      <Layout title="Blog">
       <h1>Blog</h1>
       <ul>
         {posts.map(({ slug, title, excerpt }) => (
           <li key={slug}>
             <h2>
               <Link href={`/blog/${slug}`}>
-                <a>{title}</a>
+                <span>{title}</span>
               </Link>
             </h2>
             <p>{excerpt}</p>
           </li>
         ))}
       </ul>
+      </Layout>
     </>
   );
 }
