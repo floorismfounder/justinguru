@@ -2,8 +2,12 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import { useState } from 'react';
 import styles from '@/styles/contact.module.scss';
+import PageTransition from '@/components/PageTransition';
+import { forwardRef } from 'react';
+type IndexPageProps = {}
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
-export default function Contact() {
+function Contact({}, ref: IndexPageRef) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -35,46 +39,50 @@ export default function Contact() {
   };
 
   return (
-    <Layout title="Contact">
-      <Head>
-        <meta name="description" content="Get in touch with us" />
-      </Head>
-      <h1>Contact Us</h1>
-      {submitted ? (
-        <p className={styles.success}>Thank you for your message!</p>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </label>
-          <label>
-            Email
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
-          <label>
-            Message
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-          </label>
-          <button type="submit" disabled={submitting}>
-            {submitting ? 'Submitting...' : 'Submit'}
-          </button>
-        </form>
-      )}
-    </Layout>
+    <PageTransition ref={ref}>
+      <Layout title="Contact">
+        {/* <Head>
+          <meta name="description" content="Get in touch with us" />
+        </Head> */}
+        <h1>Contact Us</h1>
+        {submitted ? (
+          <p className={styles.success}>Thank you for your message!</p>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+            <label>
+              Message
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+            </label>
+            <button type="submit" disabled={submitting}>
+              {submitting ? 'Submitting...' : 'Submit'}
+            </button>
+          </form>
+        )}
+      </Layout>
+    </PageTransition>
   );
 }
+
+export default forwardRef(Contact);

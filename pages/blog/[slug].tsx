@@ -2,12 +2,15 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import { Post, getPostBySlug, getAllPostSlugs } from '../../lib/posts';
+import PageTransition from '@/components/PageTransition';
+import { forwardRef, ForwardRefRenderFunction } from 'react';
 
-type Props = {
+type PostPageProps = {
   post: Post;
+  ref?: React.Ref<HTMLDivElement>;
 };
 
-const PostPage: React.FC<Props> = ({ post }) => {
+const PostPage: ForwardRefRenderFunction<HTMLDivElement, PostPageProps> = ({ post }, ref) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -15,13 +18,15 @@ const PostPage: React.FC<Props> = ({ post }) => {
   }
 
   return (
-    <Layout title={post.frontmatter.title}>
-      <article>
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </article>
-    </Layout>
+    <PageTransition ref={ref}>
+      <Layout title={post.frontmatter.title}>
+        <article>
+          <h1>{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </article>
+      </Layout>
+    </PageTransition>
   );
 };
 
@@ -36,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<PostPageProps> = async ({ params }) => {
   const slug = params?.slug as string;
   const post = await getPostBySlug(slug);
 
@@ -45,4 +50,4 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   };
 };
 
-export default PostPage;
+export default forwardRef(PostPage);

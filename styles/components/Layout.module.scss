@@ -1,0 +1,72 @@
+.layout {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .main {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pageTransitionEnter {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .pageTransitionEnterActive {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  .pageTransitionEnterDone {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .pageTransitionExit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .pageTransitionExitActive {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+  }
+  
+  .pageTransitionExitDone {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+
+  .page-transition-loading-appear {
+    opacity: 0;
+  }
+
+  .page-transition-loading-appear-done {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .page-transition-loading-enter {
+    opacity: 0;
+  }
+
+  .page-transition-loading-enter-done {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .page-transition-loading-exit {
+    opacity: 1;
+  }
+
+  .page-transition-loading-exit-done {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
