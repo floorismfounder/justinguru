@@ -1,11 +1,14 @@
 .nav {
+    a span {
+        color: #4aaff9;
+    }
     a span.current {
-        color: red;
+        color: #ff288d;
     }
 }
 
 .pacmantop{
-    background-color:yellow;
+    background-color: #ff288d;
     height:50px;
     width:100px;
     border-radius:50px 50px 0 0;
@@ -13,7 +16,7 @@
   }
   
   .pacmanbottom{
-  background-color:yellow;
+  background-color: #ff288d;
     height:50px;
     width:100px;
     border-radius:0 0 50px 50px;

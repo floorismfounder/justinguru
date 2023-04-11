@@ -11,7 +11,7 @@ return (
 <Layout title="About">
 <h1>About Me</h1>
 <p>
-Welcome to my personal website! My name is Justin, and I am a JavaScript developer, investor, and avid sailor based in Oregon. I love to explore the great outdoors and stay active through beach trips, hikes, and working out, and I also enjoy playing guitar and jamming with friends.
+Welcome to my personal website! My name is Justin, and I am a JavaScript developer, investor, and avid sailor based in Virginia. I love to explore the great outdoors and stay active through beach trips, hikes, and working out, and I also enjoy playing guitar and jamming with friends.
 </p>
 <p>
 My wide range of interests includes investing, survival skills, grilling, chess, rock climbing, guitar, marksmanship, robotics, photography, martial arts, electronic music producing, writing, and many more. I am also passionate about volunteering and coaching and mentoring others.
