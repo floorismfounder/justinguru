@@ -13,9 +13,9 @@ export default function Layout({ children, title }: LayoutProps) {
   const router = useRouter();
   return (
     <>
-
+      <div className={styles.container}>
       {children}
-
+      </div>
     </>
   );
 }

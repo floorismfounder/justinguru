@@ -102,3 +102,16 @@ meter {
 :where(dialog:modal) {
     all: revert;
 }
+
+.two-col {
+    display:flex;
+}
+
+.light-bg {
+    background: linear-gradient(115deg, #f3f9f7 0%, #f3beda 100%);
+    z-index: -1;
+}
+
+.light-bg p {
+    color: #020202;
+}
