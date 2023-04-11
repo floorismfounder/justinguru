@@ -6,7 +6,6 @@ import matter from 'gray-matter';
 import Layout from '@/components/Layout';
 import PageTransition from '@/components/PageTransition';
 import { forwardRef } from 'react';
-
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
