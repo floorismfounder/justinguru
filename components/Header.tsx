@@ -1,24 +1,27 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '@/styles/components/Header.module.scss';
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/">
-          <span>Home</span>
+          <span className={router.pathname === '/' ? styles.current : ''}>Home</span>
         </Link>
         <Link href="/about">
-          <span>About</span>
+          <span className={router.pathname === '/about' ? styles.current : ''}>About</span>
         </Link>
         <Link href="/resume">
-          <span>Resume</span>
+          <span className={router.pathname === '/resume' ? styles.current : ''}>Resume</span>
         </Link>
         <Link href="/contact">
-          <span>Contact</span>
+          <span className={router.pathname === '/contact' ? styles.current : ''}>Contact</span>
         </Link>
         <Link href="/blog">
-          <span>Blog</span>
+          <span className={router.pathname === '/blog' ? styles.current : ''}>Blog</span>
         </Link>
       </nav>
     </header>
