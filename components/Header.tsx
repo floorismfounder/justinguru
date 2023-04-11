@@ -8,11 +8,11 @@ export default function Header() {
   const [pacmanPosition, setPacmanPosition] = useState(0);
   const router = useRouter();
   const { pathname } = router;
-  const homeLinkRef = useRef<HTMLAnchorElement>(null);
-  const aboutLinkRef = useRef<HTMLAnchorElement>(null);
-  const resumeLinkRef = useRef<HTMLAnchorElement>(null);
-  const contactLinkRef = useRef<HTMLAnchorElement>(null);
-  const blogLinkRef = useRef<HTMLAnchorElement>(null);
+  const homeLinkRef = useRef<HTMLSpanElement>(null);
+  const aboutLinkRef = useRef<HTMLSpanElement>(null);
+  const resumeLinkRef = useRef<HTMLSpanElement>(null);
+  const contactLinkRef = useRef<HTMLSpanElement>(null);
+  const blogLinkRef = useRef<HTMLSpanElement>(null);
   let activeLinkRef = homeLinkRef;
 
   useEffect(() => {
@@ -54,8 +54,19 @@ export default function Header() {
   const resumeLinkClass = `${styles.navLink} ${currentClass('/resume')}`;
   const blogLinkClass = `${styles.navLink} ${currentClass('/blog')}`;
   const pacmanClass = `${styles.pacman} ${styles[`pacman${pacmanDirection}`]} ${pathname === '/' ? styles.pacmancenter : ''}`;
-  const pacmanTopClass = styles.pacmantop;
-  const pacmanBottomClass = styles.pacmanbottom;
+  const pacmanTopClass = `${styles.pacmantop} ${styles[`pacman${pacmanDirection === 'right' ? 'left' : 'right'}`]}`;
+  const pacmanBottomClass = `${styles.pacmanbottom} ${styles[`pacman${pacmanDirection === 'right' ? 'left' : 'right'}`]}`;
+
+  const handleLinkClick = (ref: React.RefObject<HTMLSpanElement>) => {
+    if (ref.current !== null) {
+      const currentPath = pathname.split('/')[1];
+      const navLinks = ['/', '/about', '/resume', '/contact', '/blog'];
+      const clickedLinkIndex = navLinks.indexOf(ref.current.getAttribute('href') ?? '');
+      const pacmanClass = clickedLinkIndex > navLinks.indexOf(`/${currentPath}`) ? 'right' : 'left';
+      setPacmanDirection(pacmanClass);
+      setPacmanPosition(ref.current.offsetLeft);
+    }
+  };
 
   return (
     <header className={styles.header}>
@@ -67,32 +78,33 @@ export default function Header() {
         <ul className={styles.navul}>
           <li>
             <Link href="/">
-              <span ref={homeLinkRef} className={navLinkClass}>Home</span>
+              <span ref={homeLinkRef} className={navLinkClass} onClick={() => handleLinkClick(homeLinkRef)}>Home</span>
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <span ref={aboutLinkRef} className={aboutLinkClass}>About</span>
+              <span ref={aboutLinkRef} className={aboutLinkClass} onClick={() => handleLinkClick(aboutLinkRef)}>About</span>
             </Link>
           </li>
           <li>
             <Link href="/resume">
-              <span ref={resumeLinkRef} className={resumeLinkClass}>Resume</span>
+              <span ref={resumeLinkRef} className={resumeLinkClass} onClick={() => handleLinkClick(resumeLinkRef)}>Resume</span>
             </Link>
           </li>
           <li>
             <Link href="/contact">
-              <span ref={contactLinkRef} className={contactLinkClass}>Contact</span>
+              <span ref={contactLinkRef} className={contactLinkClass} onClick={() => handleLinkClick(contactLinkRef)}>Contact</span>
             </Link>
           </li>
           <li>
             <Link href="/blog">
-              <span ref={blogLinkRef} className={blogLinkClass}>Blog</span>
+              <span ref={blogLinkRef} className={blogLinkClass} onClick={() => handleLinkClick(blogLinkRef)}>Blog</span>
             </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
+  
   
 }
