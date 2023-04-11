@@ -7,6 +7,10 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.packman}>
+        <div className={styles.pacmantop}></div>
+        <div className={styles.pacmanbottom}></div>
+      </div>
       <nav className={styles.nav}>
         <Link href="/">
           <span className={router.pathname === '/' ? styles.current : ''}>Home</span>
