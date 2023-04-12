@@ -16,14 +16,14 @@ return (
 <PageTransition ref={ref}>
 <Layout title="Resume">
 <div className={styles.resume}>
-<h2>Justin Bartlett</h2>
+<h1>Justin Bartlett Resume</h1>
 <hr />
 <div className={styles.section}>
 <h3>Experience</h3>
 <ul>
 <li>
 <div className={styles.job}>
-<h4>Founder, Floorism, Inc., San Francisco, CA | 03/2022 - Present</h4>
+<h4>Founder, <a href="https://floorism.com">Floorism</a>, Inc., San Francisco, CA | 03/2022 - Present</h4>
 <ul>
 <li>
 Consultancy focusing on quantitative backtested technical strategies and augmented reality applications, utilizing React, Firebase, Firestore, NLP, Cloud Functions, Redux, React Router, Node, Express, Webrtc, Stripe, Socket.io, ML & AI.
@@ -110,11 +110,11 @@ Refactored GraphQL schemas, implemented predictive analytics services, updated C
       <div className={styles.section}>
         <h3>Additional Projects</h3>
         <ul>
-          <li>Grit & Merit</li>
-          <li>Red Vector</li>
-          <li>Bobtail Capital</li>
+          <li><a href="https://www.gritandmerit.com">Grit & Merit</a></li>
+          <li><a href="https://redvector.ai/">Red Vector</a></li>
+          <li><a href="https://www.bobtail.com/">Bobtail Capital</a></li>
           <li>TaskFit</li>
-          <li>Anant</li>
+          <li><a href="https://anant.us">Anant</a></li>
         </ul>
       </div>
     </div>

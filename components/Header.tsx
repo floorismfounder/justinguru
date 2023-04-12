@@ -13,7 +13,6 @@ import BookCloseIcon from '../public/Book_Close_lottie.json';
 const navLinks = [
   { href: '/', label: 'Home', icon: HomeIcon },
   { href: '/resume', label: 'Resume', icon: AwardIcon },
-  { href: '/contact', label: 'Contact', icon: MailIcon },
   { href: '/blog', label: 'Blog', icon: BookCloseIcon },
 ];
 
@@ -69,7 +68,7 @@ export default function Header() {
         <ul className={styles.navul}>
           {navLinks.map((link, index) => {
             const linkRef = linkRefs.current[index] ?? (linkRefs.current[index] = null);
-            const linkClass = `${styles.navLink} ${currentClass(link.href)}`;
+            const linkClass = `${styles.navLink} ${styles[(currentClass(link.href))]}`;
             let linkIcon;
             if (typeof link.icon === 'string') {
               linkIcon = require(link.icon);

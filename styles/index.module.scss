@@ -1,3 +1,40 @@
 .animation {
     height: 500px;
 }
+
+.description {
+    max-width: 800px;
+
+
+}
+
+.twocol {
+    display: flex;
+    align-items: center;
+    .green {
+        color: green;
+    }
+    h1 {
+        margin-bottom: 24px;
+    }
+    p {
+        margin-bottom: 24px;
+    }
+    ul {
+        list-style: outside;
+        display:flex; flex-wrap:wrap; flex-direction:row; 
+    }
+    li {
+        flex:1 1 auto; width:40%;
+        a {
+            color: blue;
+            text-decoration: underline;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// .main {
+//     max-width: 1200px;
+//     margin: 0 auto;
+// }
