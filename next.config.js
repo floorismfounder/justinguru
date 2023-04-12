@@ -4,6 +4,9 @@ const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
+  },
+  publicRuntimeConfig: {
+    lottiePath: '/public' // replace with the actual path to your Lottie animations
   }
 }
 
