@@ -100,7 +100,7 @@ export default function Header() {
         </ul>
       </nav>
       <span className={styles.logo}>
-        Justin.
+       © Justin.
         <span className={styles.red}>g</span>
         <span className={styles.yellow}>u</span>
         <span className={styles.green}>r</span>

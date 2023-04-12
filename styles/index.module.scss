@@ -8,9 +8,21 @@
 
 }
 
+.alert {
+    background: yellow;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 40px;
+    padding: 20px;
+}
+
 .twocol {
     display: flex;
+    height: calc( 100vh - 300px );
     align-items: center;
+    .left, .right {
+        flex:1 1 auto; width:40%;
+    }
     .green {
         color: green;
     }

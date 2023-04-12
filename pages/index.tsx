@@ -12,8 +12,10 @@ function Home({}, ref: IndexPageRef) {
     <PageTransition ref={ref}>
       <Layout title="My Portfolio">
         <main className={styles.main}>
+          <p className={styles.alert}>I'm still very much working on this website</p>
           <div className={styles.twocol}>
             <div className={styles.left}>
+              
               <h1>Justin Bartlett</h1>
               <p>Introducing Justin, a versatile JavaScript developer, investor, sailor, and polymath from Virginia</p>
               <p><span className={styles.green}>Let's Work Together</span>.  I'm available at</p>
