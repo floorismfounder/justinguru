@@ -108,7 +108,7 @@ meter {
 }
 
 .light-bg {
-    background: linear-gradient(115deg, #f3f9f7 0%, #f3beda 100%);
+    background-color: #fff;
     z-index: -1;
 }
 

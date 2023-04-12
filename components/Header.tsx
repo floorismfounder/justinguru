@@ -12,7 +12,6 @@ import BookCloseIcon from '../public/Book_Close_lottie.json';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: HomeIcon },
-  { href: '/about', label: 'About', icon: InfoIcon },
   { href: '/resume', label: 'Resume', icon: AwardIcon },
   { href: '/contact', label: 'Contact', icon: MailIcon },
   { href: '/blog', label: 'Blog', icon: BookCloseIcon },
@@ -80,17 +79,19 @@ export default function Header() {
             const isCurrentLink = currentClass(link.href) === 'current';
             return (
               <li key={link.href}>
-                <Link href={link.href}>
-                  <Lottie
-                    options={{
-                      animationData: linkIcon,
-                      loop: false,
-                      autoplay: isCurrentLink,
-                    }}
-                    height={50}
-                    width={50}
-                  />
-                  <span ref={el => linkRefs.current[index] = el} className={linkClass} onClick={() => handleLinkClick(index)}>
+                <Link href={link.href} ref={el => linkRefs.current[index] = el} onClick={() => handleLinkClick(index)}>
+                  <div className={styles.iconcontainer}>
+                    <Lottie
+                      options={{
+                        animationData: linkIcon,
+                        loop: false,
+                        autoplay: isCurrentLink,
+                      }}
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                  <span className={linkClass} >
                     {link.label}
                   </span>
                 </Link>
@@ -99,6 +100,13 @@ export default function Header() {
           })}
         </ul>
       </nav>
+      <span className={styles.logo}>
+        Justin.
+        <span className={styles.red}>g</span>
+        <span className={styles.yellow}>u</span>
+        <span className={styles.green}>r</span>
+        <span className={styles.blue}>u</span>
+      </span>
     </header>
   );
   
