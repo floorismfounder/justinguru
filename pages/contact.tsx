@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from '@/styles/contact.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { forwardRef } from 'react';
+import Lottie from 'lottie-react-web';
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -45,6 +46,14 @@ function Contact({}, ref: IndexPageRef) {
           <meta name="description" content="Get in touch with us" />
         </Head> */}
         <h1>Contact Us</h1>
+
+        <div className={styles.animation}>
+        <Lottie
+              options={{
+                animationData: require('../public/Scene3.json'),
+              }}
+            />
+        </div>
         {submitted ? (
           <p className={styles.success}>Thank you for your message!</p>
         ) : (
