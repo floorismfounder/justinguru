@@ -12,6 +12,13 @@ function Home({}, ref: IndexPageRef) {
     <PageTransition ref={ref}>
       <Layout title="My Portfolio">
         <main className={styles.main}>
+          <div className={styles.lines}>
+          <Lottie options={{
+            animationData: require('../public/Lines2.json'),
+            loop: true,
+            autoplay: true,
+          }} />
+          </div>
           <p className={styles.alert}>🦄 I'm still very much working on this website</p>
           <div className={styles.twocol}>
             <div className={styles.left}>
@@ -56,7 +63,7 @@ function Home({}, ref: IndexPageRef) {
               <div className={styles.heroimg}>
               <Image
                 className={styles.meh}
-                src="/meh2.png"
+                src="/meh3.png"
                 alt="Justin Bartlett and Peter Bartlett"
                 width={500}
                 height={500}
