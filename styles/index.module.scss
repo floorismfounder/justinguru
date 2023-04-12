@@ -16,6 +16,76 @@
     padding: 20px;
 }
 
+@keyframes run {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 0;    
+    }
+  }
+  @keyframes run2 {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 100%;
+    }
+    100% {
+      top: 0;    
+    }
+  }
+
+.heroimg {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        width: 400px;
+        height: 400px;
+        background: #000;
+        background: linear-gradient(115deg, green 0%, blue 100%);
+        display: block;
+        animation: linear infinite;
+        animation-name: run;
+        animation-duration: 5s;
+    }
+    &::after{
+        content: "+++";
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        font-size: 48px;
+        color: white;
+        animation: linear infinite;
+        animation-name: run;
+        animation-duration: 7s;
+    }
+    .plus {
+        position: absolute;
+        bottom: 80px;
+        left: 420px;
+        font-size: 48px;
+        color: white;
+        line-height: 48px;
+        animation: linear infinite;
+        animation-name: run2;
+        animation-duration: 5s;
+    }
+}
+
+.meh {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+
+}
+
 .twocol {
     display: flex;
     height: calc( 100vh - 300px );
@@ -39,7 +109,7 @@
     li {
         flex:1 1 auto; width:40%;
         a {
-            color: blue;
+            color: red;
             text-decoration: underline;
             font-size: 1.2rem;
         }

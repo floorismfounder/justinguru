@@ -12,7 +12,7 @@ function Home({}, ref: IndexPageRef) {
     <PageTransition ref={ref}>
       <Layout title="My Portfolio">
         <main className={styles.main}>
-          <p className={styles.alert}>I'm still very much working on this website</p>
+          <p className={styles.alert}>🦄 I'm still very much working on this website</p>
           <div className={styles.twocol}>
             <div className={styles.left}>
               
@@ -53,14 +53,23 @@ function Home({}, ref: IndexPageRef) {
               </ul>
             </div>
             <div className={styles.right}>
+              <div className={styles.heroimg}>
               <Image
-                className={styles.logo}
-                src="/dude.svg"
-                alt="Next.js Logo"
-                width={800}
-                height={800}
+                className={styles.meh}
+                src="/meh2.png"
+                alt="Justin Bartlett and Peter Bartlett"
+                width={500}
+                height={500}
                 priority
               />
+              <div className={styles.plus}>
+                + <br />
+                + <br />
+                + <br />
+                + <br />
+              </div>
+              </div>
+              
             </div>
           </div>
 
