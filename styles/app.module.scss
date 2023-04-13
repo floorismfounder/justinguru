@@ -1,26 +1,38 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: local("Space Grotesk Regular"),url('../public/fonts/space-grotesk/SpaceGrotesk-Regular.woff');
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap
+  }
+  @font-face {
+    font-family: "Space Grotesk";
+    src: local("Space Grotesk Bold"),url('../public/fonts/space-grotesk/SpaceGrotesk-Bold.woff');
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap
+  }
+
 .app {
-    background: #fff;
+    background: rgb(18,18,18);
     // background: linear-gradient(115deg, #19181d 0%, #0f4e52 100%);
     color: #000;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Space Grotesk', monospace;
     font-weight: 400;
     min-height: 100vh;
     p {
-        font-family: 'Source Code Pro', monospace;
+        font-family: 'Space Grotesk', monospace;
         font-weight: 400;
     }
-    h3, h4, h5, h6 {
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 400;
-    }
-    h1, h2 {
-        font-family: 'Syncopate', monospace;
-        text-transform: uppercase;
+    h1, h2, h3, h4, h5, h6  {
+        font-family: 'Space Grotesk', monospace;
+        font-weight: 700;
     }
     h1 {
-        font-size: 4rem;
-        font-weight: 800;
+        font-size: 96px;
+        font-weight: 700;
         margin: 0;
+        line-height: 105px;
     }
     h2 {
         font-size: 2rem;
