@@ -10,12 +10,12 @@
 .line {
   position: absolute;
   opacity: 0.15;
-  left:-206px;
+  left:-140px;
   top: -100px;
 }
 .triangle {
   position: absolute;
-  bottom: -50px;
+  bottom: 0px;
   right: -40px;
 }
 @keyframes run {
@@ -50,6 +50,7 @@
 
 .heroimg {
     position: relative;
+    padding: 40px 0;
 }
 
 .meh {
@@ -172,9 +173,12 @@
     .twocol {
         flex-direction: column;
         height: auto;
-        margin: 0 auto;
+        margin: 60px auto 0;
         display: block;
         padding: 0 20px;
+        .line {
+          display: none;
+        }
         h1 {
             font-size: 3.2rem;
             line-height: 3.3rem;
@@ -200,4 +204,12 @@
         }
     }
     .triangle { display: none;}
+    .threecol {
+      top: 0;
+      padding-top: 40px;
+      .left, .middle, .right {
+        margin: 0 20px 20px;
+        width: calc(100% - 40px);
+      }
+    }
 }
