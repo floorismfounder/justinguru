@@ -47,16 +47,6 @@ export default function App({ Component, pageProps, title }: MyAppProps) {
         />
       </Head>
         <div className={styles.app}>
-        <div className={styles['uni-header-section-indicator'] + styles['uk-text-xsmall dark:uk-text-white'] 
-        + styles['uk-visible@l']}>
-                <ul className={styles.ukList}>
-                    <li data-selector=".uni-hero">About me</li>
-                    <li data-selector=".uni-works">Featured works</li>
-                    <li data-selector=".uni-testimonials">Clients</li>
-                    <li data-selector=".uni-blog-posts">Latest insights</li>
-                    <li data-selector=".uni-cta-footer">Get in touch</li>
-                </ul>
-            </div>
           <Header />
           <AnimatePresence initial={false} mode="popLayout">
             <Component key={pageKey} {...pageProps} />
