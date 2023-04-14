@@ -124,6 +124,35 @@ function Home({}, ref: IndexPageRef) {
               </div>
             </div>
           </div>
+          <div className={styles.logos}>
+            <h3>I've worked with these fine brands</h3>
+            <ul>
+              <li>
+                <Image src="/images/logos/capitalone.svg" alt="Capital One" width={224} height={80} className="capitalone" />
+              </li>
+              <li>
+                <Image src="/images/logos/finra.svg" alt="FINRA" width={188} height={67} className='finra' />
+              </li>
+              <li>
+                <Image src="/images/logos/forcepoint.svg" alt="Forcepoint" width={199} height={37} />
+              </li>
+              <li>
+                <Image src="/images/logos/mastercard.svg" alt="Mastercard" width={120} height={92} />
+              </li>
+              <li>
+                <Image src="/images/logos/va.svg" alt="VA" width={248} height={56} />
+              </li>
+              <li>
+                <Image src="/images/logos/microsoft.svg" alt="Microsoft" width={151} height={69} />
+              </li>
+              <li>
+                <Image src="/images/logos/aws.svg" alt="AWS" width={121} height={73} />
+              </li>
+              <li>
+                <Image src="/images/logos/google.svg" alt="AWS" width={170} height={71} />
+              </li>
+            </ul>
+          </div>
         </main>
       </Layout>
     </PageTransition>
