@@ -1,19 +1,86 @@
 .resume {
-    padding: 30px 0 100px;
-    max-width: 740px;
+    padding: 130px 0 100px;
+    max-width: 1200px;
+    // background: rgb(19,19,19);
+    color:#fff;
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
     h3, p, li {
         font-size: 1.2rem;
         margin-bottom: 12px;
     }
+    h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(83,83,83);
+    }
     ul ul {
-        list-style: outside;
+        // list-style: outside;
     }
     h3, h4 {
         margin-top: 24px;
     }
     a {
-        color: blue;
+        color: #fff;
         text-decoration: underline;
+    }
+    .job {
+        display: flex;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 0 50px;
+        }
+        .left {
+            width: 300px;
+            margin-right: 50px;
+            padding-top: 10px;
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 21px;
+                color: rgb(198,198,198);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                text-align: right;
+                @media screen and (max-width: 768px) {
+                    text-align: left;
+                }
+            }
+            
+        }
+        .right {
+            .headingwrap {
+                display: flex;
+                align-items: center;
+            }
+            flex: 1;
+            p {
+                font-size: 28px;
+                line-height: 42px;
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            ul {
+                max-width: 700px;
+                margin-bottom: 48px;
+                li {
+                    font-size: 28px;
+                    line-height: 42px;
+                    margin-bottom: 18px;
+                    @media screen and (max-width: 768px) {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
     }
 }
 
