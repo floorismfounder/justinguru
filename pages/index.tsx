@@ -69,7 +69,17 @@ function Home({}, ref: IndexPageRef) {
                   </div> */}
                 </div>
               </div>
-            </div>  
+            </div>
+            <button className={styles.buttonmobile}>
+              <Lottie
+                options={{
+                  animationData: require('../public/lotties/Mail_Send_lottie.json'),
+                }}
+                width={54}
+                height={54}
+              />
+              <span>Hire Justin.guru</span>
+            </button>  
           </div>
           <div className={styles.threecolbg}>
             <div className={styles.threecol}>

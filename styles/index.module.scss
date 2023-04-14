@@ -71,6 +71,9 @@
 .heroimg {
     position: relative;
     padding: 40px 0;
+    @media screen and (max-width: 768px) {
+      padding: 0 0 40px 0;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -83,6 +86,9 @@
       z-index: 0;
       left:-140px;
       top: -100px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
   }
   &::before {
     content: '';
@@ -106,12 +112,18 @@
     display: block;
     border-radius: 50%;
     z-index: 1;
+    margin: 0 auto;
 }
 
 .button {
   background: #fff;
-  height: 56px;
-  font-size: 24px;
+  height: 42px;
+  font-size: 18px;
+        //   color: rgb(18, 18, 18);
+        //   font-weight: 700;
+        //   padding: 0 18px;   
+  // height: 56px;
+  // font-size: 24px;
   color: rgb(18, 18, 18);
   font-weight: 700;
   padding: 0 24px 0 12px;
@@ -124,10 +136,38 @@
   }
 }
 
+.buttonmobile {
+  background: #fff;
+  height: 42px;
+  font-size: 18px;
+  color: rgb(18, 18, 18);
+  font-weight: 700;
+  padding: 0 24px 0 12px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .buttonmobile {
+    display: flex;
+  } 
+  .button {
+    display: none;
+  }
+}
+
 .twocolbg {
   padding-top: 100px;
   background: rgb(18,18,18);
   background: linear-gradient(145deg, rgb(18,18,18) 55%, rgb(25,25,25) 70%, rgb(50,50,50) 100%);
+  @media screen and (max-width: 768px) {
+    padding-bottom: 100px;
+  }
 }
 
 .twocol {
@@ -261,15 +301,15 @@
             margin: 0 20px;
             width: 100%;
         }
-        .button {
-          height: 42px;
-          font-size: 18px;
-          color: rgb(18, 18, 18);
-          font-weight: 700;
-          padding: 0 18px;   
-          display: flex;
-          justify-content: space-between;
-        }
+        // .button {
+        //   height: 42px;
+        //   font-size: 18px;
+        //   color: rgb(18, 18, 18);
+        //   font-weight: 700;
+        //   padding: 0 18px;   
+        //   display: flex;
+        //   justify-content: space-between;
+        // }
         .meh {
           width: 400px;
           height: 400px;
