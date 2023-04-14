@@ -22,17 +22,17 @@ return (
       <div className={styles.left}>
       </div>
       <div className={styles.right}>
-          <div className={styles.headingwrap}>
-            {/* <Image
+          {/* <div className={styles.headingwrap}> */}
+            <Image
               className={styles.square}
-              src="/images/sun.svg"
+              src="/images/lines.svg"
               alt="Justin Bartlett"
-              width={200}
-              height={200}
+              width={250}
+              height={80}
               priority
-            /> */}
+            />
             <h1>Resume</h1>
-          </div>
+          {/* </div> */}
           <h3>Experience</h3>
       </div>
     </div>

@@ -3,6 +3,10 @@
     max-width: 1200px;
     // background: rgb(19,19,19);
     color:#fff;
+    .square {
+        margin-bottom: 20px;
+        opacity: 50%;
+    }
     h1 {
         font-size: 80px;
         line-height: 80px;
@@ -21,7 +25,7 @@
         color: rgb(83,83,83);
     }
     ul ul {
-        // list-style: outside;
+        list-style: outside;
     }
     h3, h4 {
         margin-top: 24px;
