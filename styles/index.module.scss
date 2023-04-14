@@ -16,7 +16,7 @@
 .triangle {
   position: absolute;
   bottom: 0px;
-  right: -40px;
+  right: -50px;
 }
 @keyframes run {
     0% {
@@ -169,7 +169,22 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .twocol {
+    flex-direction: column;
+    height: auto;
+    padding: 150px 50px;
+    .left, .right {
+      width: 100%;
+      .triangle { display: none}
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
+    .hidemobile {
+        display: none;
+    }
     .twocol {
         flex-direction: column;
         height: auto;

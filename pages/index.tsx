@@ -17,18 +17,20 @@ function Home({}, ref: IndexPageRef) {
               <div className={styles.left}>
                 <p className={styles.name}>UX Dev Ops A/R AI CS@SP Quant</p>
                 <h1>Augmented Ameliorator</h1>
-                <button className={styles.button}>Hire a Polymath</button>
+                <button className={styles.button}>Hire Justin.guru</button>
               </div>
               <div className={styles.right}>
                 <div className={styles.heroimg}>
-                <Image
-                  className={styles.line}
-                  src="/images/line.svg"
-                  alt="Justin Bartlett"
-                  width={500}
-                  height={500}
-                  priority
-                />
+                  <div className={styles.hidemobile}>
+                    <Image
+                      className={styles.line}
+                      src="/images/line.svg"
+                      alt="Justin Bartlett"
+                      width={500}
+                      height={500}
+                      // priority
+                    />
+                  </div>
                 <Image
                   className={styles.bg}
                   src="/images/bg.svg"
@@ -45,14 +47,16 @@ function Home({}, ref: IndexPageRef) {
                   height={500}
                   priority
                 />
-                <Image
-                  className={styles.triangle}
-                  src="/images/triangle.svg"
-                  alt="Justin Bartlett"
-                  width={300}
-                  height={300}
-                  priority
-                />
+                 <div className={styles.hidemobile}>
+                    <Image
+                      className={styles.triangle}
+                      src="/images/triangle.svg"
+                      alt="Justin Bartlett"
+                      width={300}
+                      height={300}
+                      // priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>  

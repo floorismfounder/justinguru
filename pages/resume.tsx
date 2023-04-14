@@ -23,14 +23,14 @@ return (
       </div>
       <div className={styles.right}>
           {/* <div className={styles.headingwrap}> */}
-            <Image
+            {/* <Image
               className={styles.square}
               src="/images/lines.svg"
               alt="Justin Bartlett"
               width={250}
               height={80}
               priority
-            />
+            /> */}
             <h1>Resume</h1>
           {/* </div> */}
           <h3>Experience</h3>
