@@ -8,6 +8,11 @@
   position: absolute;
   // animation: run 8s ease-in-out .01s  infinite;
 }
+
+.main {
+  max-width: 100%;
+  overflow: hidden;
+}
 .line {
   position: absolute;
   opacity: 0.15;
