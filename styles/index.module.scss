@@ -6,21 +6,21 @@
 }
 .bg {
   position: absolute;
-  animation: run 8s ease-in-out .01s  infinite;
+  // animation: run 8s ease-in-out .01s  infinite;
 }
 .line {
   position: absolute;
   opacity: 0.15;
   left:-140px;
   top: -100px;
-  animation: run3 6s ease-in-out .01s  infinite;
+  // animation: run3 6s ease-in-out .01s  infinite;
 }
-.triangle {
-  position: absolute;
-  bottom: 0px;
-  right: -50px;
-  animation: run2 10s ease-in-out .01s  infinite;
-}
+// .triangle {
+//   position: absolute;
+//   bottom: 0px;
+//   right: -50px;
+//   animation: run2 10s ease-in-out .01s  infinite;
+// }
 @keyframes run3 {
   0% {
     left: -100px;
@@ -66,12 +66,41 @@
 .heroimg {
     position: relative;
     padding: 40px 0;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500px;
+      height: 500px;
+      background: url('/images/line.svg') no-repeat;
+      opacity: 0.2;
+      z-index: 0;
+      left:-140px;
+      top: -100px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 500px;
+    background: url('/images/bg.svg') no-repeat;
+    z-index: 0;
+    @media screen and (max-width: 768px) {
+      top: 50px;
+      width: 400px;
+      height: 400px;
+      left: 0px;
+    }
+  }
 }
 
 .meh {
     position: relative;
     display: block;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .button {
@@ -80,17 +109,20 @@
   font-size: 24px;
   color: rgb(18, 18, 18);
   font-weight: 700;
-  padding: 0 24px;
+  padding: 0 24px 0 12px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  span {
+    margin-left: 8px;
+  }
 }
 
 .twocolbg {
   padding-top: 100px;
   background: rgb(18,18,18);
-  background: linear-gradient(115deg, rgb(18,18,18) 55%, rgb(25,25,25) 70%, rgb(50,50,50) 100%);
+  background: linear-gradient(145deg, rgb(18,18,18) 55%, rgb(25,25,25) 70%, rgb(50,50,50) 100%);
 }
 
 .twocol {

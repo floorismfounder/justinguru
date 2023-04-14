@@ -16,9 +16,9 @@ function Home({}, ref: IndexPageRef) {
             <div className={styles.twocol}>
               <div className={styles.left}>
                 <p className={styles.name}>UX Dev Ops A/R AI CS@SP Quant</p>
-                <h1>Augmented Ameliorator</h1>
+                <h1>Super Developer</h1>
                 <button className={styles.button}>
-                  <span>Hire Justin.guru</span>
+                  
                   <Lottie
                     options={{
                       animationData: require('../public/lotties/Mail_Send_lottie.json'),
@@ -26,11 +26,12 @@ function Home({}, ref: IndexPageRef) {
                     width={54}
                     height={54}
                   />
+                  <span>Hire Justin.guru</span>
                 </button>
               </div>
               <div className={styles.right}>
                 <div className={styles.heroimg}>
-                  <div className={styles.hidemobile}>
+                  {/* <div className={styles.hidemobile}>
                     <Image
                       className={styles.line}
                       src="/images/line.svg"
@@ -39,15 +40,15 @@ function Home({}, ref: IndexPageRef) {
                       height={500}
                       // priority
                     />
-                  </div>
-                <Image
+                  </div> */}
+                {/* <Image
                   className={styles.bg}
                   src="/images/bg.svg"
                   alt="Justin Bartlett"
                   width={500}
                   height={500}
                   priority
-                />
+                /> */}
                 <Image
                   className={styles.meh}
                   src="/images/meh3.png"
@@ -56,7 +57,7 @@ function Home({}, ref: IndexPageRef) {
                   height={500}
                   priority
                 />
-                 <div className={styles.hidemobile}>
+                 {/* <div className={styles.hidemobile}>
                     <Image
                       className={styles.triangle}
                       src="/images/triangle.svg"
@@ -65,7 +66,7 @@ function Home({}, ref: IndexPageRef) {
                       height={300}
                       // priority
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>  
