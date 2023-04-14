@@ -51,7 +51,7 @@ function Home({}, ref: IndexPageRef) {
                 /> */}
                 <Image
                   className={styles.meh}
-                  src="/images/meh3.png"
+                  src="/images/meh5.png"
                   alt="Justin Bartlett"
                   width={500}
                   height={500}

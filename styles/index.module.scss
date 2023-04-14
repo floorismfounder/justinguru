@@ -118,7 +118,7 @@
 }
 
 .button {
-  background: #fff;
+  background: #000;
   height: 42px;
   font-size: 18px;
         //   color: rgb(18, 18, 18);
@@ -126,12 +126,13 @@
         //   padding: 0 18px;   
   // height: 56px;
   // font-size: 24px;
-  color: rgb(18, 18, 18);
+  color: #fff;
   font-weight: 700;
   padding: 0 24px 0 12px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  border-radius:8px;
   align-items: center;
   span {
     margin-left: 8px;
@@ -139,10 +140,11 @@
 }
 
 .buttonmobile {
-  background: #fff;
+  background: #000;
   height: 42px;
   font-size: 18px;
-  color: rgb(18, 18, 18);
+  color: #fff;
+  border-radius:8px;
   font-weight: 700;
   padding: 0 24px 0 12px;
   margin: 0 auto;
@@ -254,6 +256,7 @@
     color: rgb(248,248,248);
     margin: 0 30px;
     padding: 50px 40px;
+    border-radius:8px;
   }
   .icon {
     width: 64px;
@@ -261,6 +264,7 @@
     border: 1px solid #dedede;
     display: flex;
     align-items: center;
+    border-radius:8px;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
