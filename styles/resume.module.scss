@@ -1,4 +1,7 @@
 .resume {
+    .additional li {
+        padding-left: 16px;
+    }
     padding: 130px 0 100px;
     max-width: 1200px;
     // background: rgb(19,19,19);
@@ -10,6 +13,8 @@
     h1 {
         font-size: 80px;
         line-height: 80px;
+        padding-left: 16px;
+        margin-top: 50px;
         @media screen and (max-width: 768px) {
                 font-size: 3.2rem;
                 line-height: 3.3rem;
@@ -23,9 +28,16 @@
         font-size: 20px;
         font-weight: 400;
         color: rgb(83,83,83);
+        padding-left: 16px;
     }
     ul ul {
-        list-style: outside;
+        list-style: none;
+        li { position: relative; padding-left: 16px; padding-right: 50px;}
+        li::before {
+            content: "+";
+            position: absolute;
+            left: -20px;
+        }
     }
     h3, h4 {
         margin-top: 24px;
@@ -55,6 +67,7 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 text-align: right;
+                padding-left: 16px;
                 @media screen and (max-width: 768px) {
                     text-align: left;
                 }
@@ -70,6 +83,7 @@
             p {
                 font-size: 28px;
                 line-height: 42px;
+                padding-left: 16px;
                 @media screen and (max-width: 768px) {
                     font-size: 18px;
                     line-height: 24px;

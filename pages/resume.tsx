@@ -31,7 +31,7 @@ return (
               height={80}
               priority
             /> */}
-            <h1>Resume</h1>
+            <h1>Résumé</h1>
           {/* </div> */}
           <h3>Experience</h3>
       </div>
@@ -186,7 +186,7 @@ return (
       </div>
       <div className={styles.right}>
       <h3>Additional Projects</h3>
-        <ul>
+        <ul className={styles.additional}>
           <li><a href="https://www.gritandmerit.com">Grit & Merit</a></li>
           <li><a href="https://redvector.ai/">Red Vector</a></li>
           <li><a href="https://www.bobtail.com/">Bobtail Capital</a></li>
