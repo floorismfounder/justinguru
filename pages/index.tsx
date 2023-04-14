@@ -17,7 +17,16 @@ function Home({}, ref: IndexPageRef) {
               <div className={styles.left}>
                 <p className={styles.name}>UX Dev Ops A/R AI CS@SP Quant</p>
                 <h1>Augmented Ameliorator</h1>
-                <button className={styles.button}>Hire Justin.guru</button>
+                <button className={styles.button}>
+                  <span>Hire Justin.guru</span>
+                  <Lottie
+                    options={{
+                      animationData: require('../public/lotties/Mail_Send_lottie.json'),
+                    }}
+                    width={54}
+                    height={54}
+                  />
+                </button>
               </div>
               <div className={styles.right}>
                 <div className={styles.heroimg}>
