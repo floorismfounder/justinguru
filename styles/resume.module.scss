@@ -32,11 +32,11 @@
     }
     ul ul {
         list-style: none;
-        li { position: relative; padding-left: 16px; padding-right: 50px;}
+        li { position: relative; padding-left: 16px; // padding-right: 50px;}
         li::before {
             content: "+";
             position: absolute;
-            left: -20px;
+            left: -15px;
         }
     }
     h3, h4 {
