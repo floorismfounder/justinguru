@@ -18,6 +18,7 @@ function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTra
 			animate={inTheCenter}
 			exit={onTheLeft}
 			transition={transition}
+			style={{ willChange: 'transform' }}
 			{...rest}
 		>
 			{children}
