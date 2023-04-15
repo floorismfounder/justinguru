@@ -7,11 +7,11 @@ type PageTransitionRef = React.ForwardedRef<HTMLDivElement>
 function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTransitionRef) {
 	const [isExiting, setIsExiting] = useState(false);
   
-	const onTheRight = { x: '0%', y: '100%' };
-	const inTheCenter = { x: 0, y: 0 };
-	const onTheLeft = { x: '0%', y: '-50%' };
+	const onTheRight = { x: '100%' };
+	const inTheCenter = { x: 0 };
+	const onTheLeft = { x: '-100%'};
   
-	const transition = { duration: 0.6, ease: 'easeInOut' };
+	const transition = { duration: 0.4, ease: 'easeInOut' };
   
 	const handleExitComplete = () => setIsExiting(false);
   
