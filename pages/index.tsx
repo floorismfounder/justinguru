@@ -16,7 +16,7 @@ function Home({}, ref: IndexPageRef) {
             <div className={styles.twocol}>
               <div className={styles.left}>
                 <p className={styles.name}>UX Dev Ops A/R AI CS@SP Quant</p>
-                <h1>Super Developer</h1>
+                <h1>Prompt Engineer</h1>
                 <button className={styles.button}>
                   
                   <Lottie
@@ -51,10 +51,10 @@ function Home({}, ref: IndexPageRef) {
                 /> */}
                 <Image
                   className={styles.meh}
-                  src="/images/meh5.png"
+                  src="/images/meh6.png"
                   alt="Justin Bartlett"
-                  width={500}
-                  height={500}
+                  width={370}
+                  height={486}
                   priority
                 />
                  {/* <div className={styles.hidemobile}>
