@@ -48,7 +48,7 @@ export default function App({ Component, pageProps, title }: MyAppProps) {
       </Head>
         <div className={styles.app}>
           <Header />
-          <AnimatePresence initial={false} mode="popLayout">
+          <AnimatePresence initial={false} mode="wait">
             <Component key={pageKey} {...pageProps} />
           </AnimatePresence>
           <Footer />

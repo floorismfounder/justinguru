@@ -7,9 +7,9 @@ type PageTransitionRef = React.ForwardedRef<HTMLDivElement>
 function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTransitionRef) {
 	const [isExiting, setIsExiting] = useState(false);
   
-	const onTheRight = { y: '-100%' };
-	const inTheCenter = { y: 0 };
-	const onTheLeft = { y: '100%' };
+	const onTheRight = { x: '0%', y: '100%' };
+	const inTheCenter = { x: 0, y: 0 };
+	const onTheLeft = { x: '0%', y: '-50%' };
   
 	const transition = { duration: 0.6, ease: 'easeInOut' };
   
