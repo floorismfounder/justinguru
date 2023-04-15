@@ -48,11 +48,11 @@ function Contact({}, ref: IndexPageRef) {
         <h1>Contact Us</h1>
 
         <div className={styles.animation}>
-        <Lottie
+        {/* <Lottie
               options={{
                 animationData: require('../public/Scene3.json'),
               }}
-            />
+            /> */}
         </div>
         {submitted ? (
           <p className={styles.success}>Thank you for your message!</p>

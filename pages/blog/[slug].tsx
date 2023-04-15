@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import { Post, getPostBySlug, getAllPostSlugs } from '../../lib/posts';
 import PageTransition from '@/components/PageTransition';
 import { forwardRef, ForwardRefRenderFunction } from 'react';
+import styles from '@/styles/post.module.scss';
 
 type PostPageProps = {
   post: Post;
@@ -20,10 +21,12 @@ const PostPage: ForwardRefRenderFunction<HTMLDivElement, PostPageProps> = ({ pos
   return (
     <PageTransition ref={ref}>
       <Layout title={post.frontmatter.title}>
-        <article>
+        <article className={styles.post}>
+          <p className={styles.topic}>{post.frontmatter.topic}</p>
           <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <p className={styles.date}>by Justin Bartlett on {post.frontmatter.date}</p>
+          <img className={styles.postimg} src={post.frontmatter.image} alt={post.frontmatter.title} />
+          <div className={styles.articlecontent} dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
       </Layout>
     </PageTransition>

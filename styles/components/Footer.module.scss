@@ -19,7 +19,7 @@
                 }
             }
             .button {
-                background: rgba(255,255,255,.15);
+                background: #000000;
                 height: 42px;
                 font-size: 18px;
                 color: #fff;
@@ -51,7 +51,7 @@
                     a {
                         color: #f8f8f8;
                         &:hover {
-                            color: #949494
+                            color: #949494;
                         }
                     }
                     @media screen and (max-width: 768px) {

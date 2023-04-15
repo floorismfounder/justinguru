@@ -5,6 +5,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import Layout from '@/components/Layout';
 import PageTransition from '@/components/PageTransition';
+import styles from '@/styles/blog.module.scss';
+import Image from 'next/image';
 import { forwardRef } from 'react';
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
@@ -12,7 +14,9 @@ type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 type BlogPostSummary = {
   slug: string;
   title: string;
-  excerpt: string;
+  topic: string;
+  thumbnail: string;
+  date: string;
 };
 
 type BlogProps = {
@@ -24,19 +28,43 @@ function Blog({ posts }: BlogProps, ref: IndexPageRef) {
     <>
       <PageTransition ref={ref}>
         <Layout title="Blog">
-        <h1>Blog</h1>
-        <ul>
-          {posts.map(({ slug, title, excerpt }) => (
-            <li key={slug}>
-              <h2>
-                <Link href={`/blog/${slug}`}>
-                  <span>{title}</span>
-                </Link>
-              </h2>
-              <p>{excerpt}</p>
-            </li>
-          ))}
-        </ul>
+          <div className={styles.blog}>
+            <div className={styles.blogheader}>
+              <h1>Justin&apos;s <span>Blog</span></h1>
+            </div>
+            <div className={styles.ulbg}>
+              <ul>
+              {posts.map(({ slug, title, topic, thumbnail, date }) => (
+                <li key={slug}>
+                  <Link href={`/blog/${slug}`}>
+                    
+                    {thumbnail && 
+                        <Image
+                        className={styles.logoimg}
+                        src={thumbnail}
+                        alt={`Thumbnail for ${title}`}
+                        width={1310}
+                        height={860}
+                        priority
+                      />
+                    }
+                    <p>
+                      <span>
+                        {date}
+                      </span>
+                      <span>
+                        {topic}
+                      </span>
+                    </p>
+                    <h2>{title}</h2>
+                    
+                  </Link>
+                </li>
+              ))}
+
+              </ul>
+            </div>
+          </div>
         </Layout>
       </PageTransition>
     </>
@@ -56,7 +84,9 @@ export const getStaticProps = async () => {
     return {
       slug,
       title: data.title,
-      excerpt: data.excerpt || '',
+      topic: data.topic || '',
+      date: data.date || '',
+      thumbnail: data.image || '', // <-- read thumbnail path from frontmatter
     };
   });
   return { props: { posts } };

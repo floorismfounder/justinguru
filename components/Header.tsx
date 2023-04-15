@@ -56,14 +56,14 @@ export default function Header() {
           </span>
         </Link>
         <nav>
-          <button className={`${styles.navicon} ${isNavOpen ? styles.active : ''}`} onClick={toggleNav}>
+          <div className={`${styles.navicon} ${isNavOpen ? styles.active : ''}`} onClick={toggleNav}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          </button>
+          </div>
           <ul className={`${styles.navul} ${isNavOpen ? styles.active : ''}`}>
             {navLinks.map((link, index) => {
               const linkRef = linkRefs.current[index] ?? (linkRefs.current[index] = null);
