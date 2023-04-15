@@ -118,7 +118,7 @@
 }
 
 .button {
-  background: #000;
+  background: rgba(255,255,255,.15);
   height: 42px;
   font-size: 18px;
         //   color: rgb(18, 18, 18);
@@ -134,6 +134,8 @@
   justify-content: space-between;
   border-radius:8px;
   align-items: center;
+  // border: 24px solid rgba(255,255,255,.25);
+  // border: 1px solid rgba(255,255,255,1);
   span {
     margin-left: 8px;
   }

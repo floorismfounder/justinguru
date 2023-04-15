@@ -48,10 +48,10 @@ return (
           <div className={styles.right}>
             <ul>
               <li>
-                Consultancy focusing on quantitative backtested technical strategies and augmented reality applications, utilizing React, Firebase, Firestore, NLP, Cloud Functions, Redux, React Router, Node, Express, Webrtc, Stripe, Socket.io, ML & AI.
+                Founder, quantitative backtested technical strategies and A/R applications, utilizing React, NLP, GCP, Azure, AWS, Redux, Three.js, Node, Express, Stripe, Socket.io, ML & AI.
               </li>
               <li>
-                Accelerator programs: Y Combinator Startup School, Microsoft for Startups, Google for Startups, AWS Startup Loft, Stripe Atlas Program, and GitHub Copilot Labs.
+                Accelerator programs: Y Combinator Startup School, Microsoft for Startups, Google for Startups, AWS Startup Loft, Stripe Atlas Program, and BunkerLabs.
               </li>
               <li>
                 Fosters self-actualization for economic growth and societal good following the eightfold noble path for the surety and welfare of all humankind.

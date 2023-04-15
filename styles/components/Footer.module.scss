@@ -1,0 +1,75 @@
+.footerbackground {
+    background: rgb(18,18,18);
+    .footer {
+        max-width: 1200px;
+        padding: 0 30px;
+        margin: 0 auto;
+        .footerupper {
+            // display: flex;
+            h2 {
+                font-size: 80px;
+                line-height: 80px;
+                letter-spacing: -.75px;
+                color: #fff;
+                max-width: 640px;
+                margin-bottom: 50px;
+                @media screen and (max-width: 768px) {
+                    font-size: 3.2rem;
+                    line-height: 3.3rem;
+                }
+            }
+            .button {
+                background: rgba(255,255,255,.15);
+                height: 42px;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 700;
+                padding: 0 24px 0 12px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                border-radius:8px;
+                align-items: center;
+                margin-bottom: 70px;
+                span {
+                  margin-left: 8px;
+                }
+              }
+        }
+        .footermiddle {
+            margin-bottom: 40px;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    flex: 1 0 29%;
+                    margin: 20px;
+                    display: flex;
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: #f8f8f8;
+                    a {
+                        color: #f8f8f8;
+                        &:hover {
+                            color: #949494
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        flex: 1 0 44%;
+                    }
+                }
+            }
+        }
+        .footerlower {
+            display: flex;
+            border-top: 1px solid #c6c6c6;
+            padding: 48px 0;
+            p {
+                font-size: 20px;
+                line-height: 30px;
+                color: rgb(198,198,198);
+                font-weight: 400;
+            }
+        }
+    }
+}

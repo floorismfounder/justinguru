@@ -26,7 +26,7 @@ function Home({}, ref: IndexPageRef) {
                     width={54}
                     height={54}
                   />
-                  <span>Hire Justin.guru</span>
+                  <span>Contact Justin Bartlett</span>
                 </button>
               </div>
               <div className={styles.right}>
@@ -78,7 +78,7 @@ function Home({}, ref: IndexPageRef) {
                 width={54}
                 height={54}
               />
-              <span>Hire Justin.guru</span>
+              <span>Contact Justin Bartlett</span>
             </button>  
           </div>
           <div className={styles.threecolbg}>
@@ -94,7 +94,7 @@ function Home({}, ref: IndexPageRef) {
                   />
                 </div>
                 <h2>Design</h2>
-                <p>I architect and create experiences and systems</p>
+                <p>Microservice and microfrontend design, microinteractions, macrodiagrams, & architecture</p>
               </div>
               <div className={styles.middle}>
               <div className={styles.icon}>
@@ -106,8 +106,8 @@ function Home({}, ref: IndexPageRef) {
                     height={54}
                   />
                 </div>
-                <h2>Development</h2>
-                <p>I write a lot of code for dashboards and apps</p>
+                <h2>DevOps</h2>
+                <p>Custom React Native, Redux, Angular, Vue, Next, & Express apps on AWS, GCP, & Azure</p>
               </div>
               <div className={styles.right}>
               <div className={styles.icon}>
@@ -119,8 +119,8 @@ function Home({}, ref: IndexPageRef) {
                     height={54}
                   />
                 </div>
-                <h2>Laborsaving</h2>
-                <p>I reduce time consuming tasks through technology </p>
+                <h2>Delegation</h2>
+                <p>I can reduce your time consuming tasks with Chat-GPT, APIs, and Lambdas</p>
               </div>
             </div>
           </div>
