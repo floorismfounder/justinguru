@@ -17,6 +17,7 @@ export default function Header() {
   const router = useRouter();
   const { pathname } = router;
   const linkRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     const index = navLinks.findIndex(link => link.href === pathname);
@@ -30,10 +31,18 @@ export default function Header() {
     return '';
   };
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headercontainer}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo} onClick={closeNav}>
           <Image
             className={styles.logoimg}
             src="/images/meh3.png"
@@ -47,13 +56,21 @@ export default function Header() {
           </span>
         </Link>
         <nav>
-          <ul className={styles.navul}>
+          <button className={`${styles.navicon} ${isNavOpen ? styles.active : ''}`} onClick={toggleNav}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul className={`${styles.navul} ${isNavOpen ? styles.active : ''}`}>
             {navLinks.map((link, index) => {
               const linkRef = linkRefs.current[index] ?? (linkRefs.current[index] = null);
               const linkClass = `${styles.navLink} ${currentClass(link.href)}`;
               return (
                 <li key={link.href}>
-                  <Link href={link.href} ref={el => linkRefs.current[index] = el}>
+                  <Link href={link.href} ref={el => linkRefs.current[index] = el} onClick={closeNav}>
                     <span className={linkClass}>{link.label}</span>
                   </Link>
                 </li>
