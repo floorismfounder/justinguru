@@ -22,8 +22,10 @@ return (
   <div className={styles.section}>
     <div className={styles.job}>
       <div className={styles.left}>
+      
       </div>
       <div className={styles.right}>
+          
           <h1>Résumé</h1>
           <h3>Experience</h3>
       </div>
@@ -185,6 +187,7 @@ return (
           <li>TaskFit</li>
           <li><a href="https://anant.us">Anant</a></li>
         </ul>
+        
       </div>
     </div>
   </div>

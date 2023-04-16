@@ -5,7 +5,21 @@
         padding: 0 30px;
         margin: 0 auto;
         .footerupper {
-            // display: flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+            .left {
+
+            }
+            .right {
+                img {
+                    margin: 0 auto 20px;
+                    display: block;
+                }
+            }
             h2 {
                 font-size: 80px;
                 line-height: 80px;
