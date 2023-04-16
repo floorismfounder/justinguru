@@ -6,15 +6,16 @@
         margin: 0 auto;
         .footerupper {
             display: flex;
-            justify-content: space-between;
+            // justify-content: around;
             align-items: center;
             @media screen and (max-width: 768px) {
                 flex-direction: column;
+                .right {
+                    text-align: center;
+                }
             }
+            
             .left {
-
-            }
-            .right {
                 img {
                     // margin: 0 auto 20px;
                     position: relative;
@@ -22,6 +23,7 @@
                     display: block;
                     @media screen and (max-width: 768px) {
                         top: -20px;
+                        margin-bottom: 40px;
                     }
                 }
             }
@@ -32,7 +34,9 @@
                 color: #fff;
                 max-width: 640px;
                 margin-bottom: 50px;
+                margin-left: 40px;
                 @media screen and (max-width: 768px) {
+                    margin-left: 0;
                     font-size: 3.2rem;
                     line-height: 3.3rem;
                 }
@@ -60,6 +64,7 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
+                
                 li {
                     flex: 1 0 29%;
                     margin: 20px;

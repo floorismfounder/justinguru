@@ -17,8 +17,9 @@ function Home({}, ref: IndexPageRef) {
           <div className={styles.twocolbg}>
             <div className={styles.twocol}>
               <div className={styles.left}>
-                <p className={styles.name}>UX Dev Ops A/R AI CS@SP Quant</p>
-                <h1>Prompt Engineer</h1>
+                <p className={styles.name}>🦄 Designer Developer Cloud AI Scrum</p>
+                {/* UX Dev Ops A/R AI CS@SP Quant</p> */}
+                <h1>Netscape Navigator</h1>
                 <button className={styles.button}>
                   
                   <Lottie
