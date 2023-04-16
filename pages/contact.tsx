@@ -5,6 +5,7 @@ import styles from '@/styles/contact.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { forwardRef } from 'react';
 import Lottie from 'lottie-react-web';
+import { useRouter } from 'next/router';
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
@@ -14,6 +15,8 @@ function Contact({}, ref: IndexPageRef) {
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,7 +44,7 @@ function Contact({}, ref: IndexPageRef) {
 
   return (
     <PageTransition ref={ref}>
-      <Layout title="Contact">
+      <Layout title="Contact" router={router}>
         {/* <Head>
           <meta name="description" content="Get in touch with us" />
         </Head> */}

@@ -4,18 +4,20 @@ import styles from '@/styles/resume.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { forwardRef } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 function Resume({}, ref: IndexPageRef) {
+  const router = useRouter();
 return (
 <>
 <Head>
 <title>Resume | Justin Bartlett</title>
 </Head>
 <PageTransition ref={ref}>
-<Layout title="Resume">
+<Layout title="Resume" router={router}>
 <div className={styles.resume}>
   <div className={styles.section}>
     <div className={styles.job}>
