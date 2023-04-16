@@ -29,11 +29,27 @@
         display: block;
     }
     .articlecontent {
-        color: rgb(198,198,198);
-        padding: 0 30px;
-        font-size: 28px;
-        line-height: 42px;
-        max-width: 1000px;
-        margin: 0 auto;
+        p {
+
+            color: rgb(198,198,198);
+            padding: 0 30px;
+            font-size: 28px;
+            line-height: 42px;
+            max-width: 1000px;
+            margin: 0 auto 24px;
+        }
+        pre {
+            background-color: rgb(248,248,248);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto 24px;
+            max-width: 1000px;
+            overflow-x: auto;
+            code {
+                color: rgb(83,83,83);
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
     }
 }

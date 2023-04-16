@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import '../styles/global.css';
 import styles from '@/styles/app.module.scss';
+import 'highlight.js/styles/github.css';
 
 interface MyAppProps extends AppProps {
   title: string;
