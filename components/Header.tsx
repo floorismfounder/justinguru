@@ -45,9 +45,9 @@ export default function Header() {
         <Link href="/" className={styles.logo} onClick={closeNav}>
           <Image
             className={styles.logoimg}
-            src="/images/meh3.png"
+            src="/images/justinface3.svg"
             alt="Justin Bartlett and Peter Bartlett"
-            width={80}
+            width={56}
             height={80}
             priority
           />
