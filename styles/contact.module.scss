@@ -1,3 +1,24 @@
-.animation {
-    width: 300px;
+.contact {
+    max-width: 1200px;
+    padding: 200px 20px;
+
+    h1 {
+        // font-size: 56px;
+        // line-height: 56px;
+        padding: 0 30px;
+        margin-top: 50px;
+        color: #fff;
+        @media screen and (max-width: 768px) {
+                font-size: 36px;
+                line-height: 36px;
+        }
+    }
+    p {
+        font-weight: 400;
+        color: rgb(198, 198, 198);
+        padding: 0 30px;
+        font-size: 28px;
+        line-height: 42px;
+        max-width: 600px;
+    }
 }

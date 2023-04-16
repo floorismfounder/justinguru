@@ -11,7 +11,7 @@ export default function Footer() {
         <Image src="/images/house.svg" className={styles.foothouse} alt="House of Bartlett" width={197} height={152} priority />
         </div>
         <div className={styles.right}>
-        <h2>I am not very active on social media 🦄</h2>
+        <h2>Human being & being social</h2>
           
           {/* <button className={styles.button}>     
             <Lottie
