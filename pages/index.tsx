@@ -51,10 +51,10 @@ function Home({}, ref: IndexPageRef) {
                 /> */}
                 <Image
                   className={styles.meh}
-                  src="/images/meh6.png"
+                  src="/images/justinface2.svg"
                   alt="Justin Bartlett"
-                  width={370}
-                  height={486}
+                  width={278}
+                  height={398}
                   priority
                 />
                  {/* <div className={styles.hidemobile}>
