@@ -20,7 +20,7 @@ const PostPage: ForwardRefRenderFunction<HTMLDivElement, PostPageProps> = ({ pos
 
   return (
     <PageTransition ref={ref}>
-      <Layout title={post.frontmatter.title}>
+      <Layout title={post.frontmatter.title} router={router}>
         <article className={styles.post}>
           <p className={styles.topic}>{post.frontmatter.topic}</p>
           <h1>{post.frontmatter.title}</h1>

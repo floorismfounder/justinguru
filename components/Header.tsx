@@ -4,23 +4,28 @@ import { useRouter } from 'next/router';
 import Lottie from 'lottie-react-web';
 import styles from '@/styles/components/Header.module.scss';
 import Image from 'next/image';
+import { NextRouter } from 'next/router'
 
 const navLinks = [
-  // { href: '/', label: 'Home' },
   { href: '/resume', label: 'Resume' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
+type HeaderProps = {
+  router: NextRouter;
+};
 
-export default function Header() {
-  const [currentLinkIndex, setCurrentLinkIndex] = useState(-1);
-  const router = useRouter();
+export default function Header({ router }: HeaderProps) {
+  if (!router) {
+    return null;
+  }
   const { pathname } = router;
+  const [currentLinkIndex, setCurrentLinkIndex] = useState(-1);
   const linkRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    const index = navLinks.findIndex(link => link.href === pathname);
+    const index = navLinks.findIndex((link) => link.href === pathname);
     setCurrentLinkIndex(index);
   }, [pathname]);
 

@@ -2,15 +2,17 @@ import Layout from '@/components/Layout';
 import styles from '@/styles/index.module.scss';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
+import { useRouter } from 'next/router';
 import { forwardRef } from 'react';
 import Lottie from 'lottie-react-web';
 type IndexPageProps = {}
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>
 
 function Home({}, ref: IndexPageRef) {
+  const router = useRouter();
   return (
     <PageTransition ref={ref}>
-      <Layout title="My Portfolio">
+      <Layout title="My Portfolio" router={router}>
         <main className={styles.main}>
           <div className={styles.twocolbg}>
             <div className={styles.twocol}>

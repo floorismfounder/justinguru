@@ -7,6 +7,7 @@ import Layout from '@/components/Layout';
 import PageTransition from '@/components/PageTransition';
 import styles from '@/styles/blog.module.scss';
 import { forwardRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 type IndexPageProps = {};
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
@@ -24,6 +25,7 @@ type BlogProps = {
 };
 
 function Blog({ posts }: BlogProps, ref: IndexPageRef) {
+  const router = useRouter();
   useEffect(() => {
     // Preload all thumbnail images
     posts.forEach((post) => {
@@ -35,7 +37,7 @@ function Blog({ posts }: BlogProps, ref: IndexPageRef) {
   return (
     <>
       <PageTransition ref={ref}>
-        <Layout title="Blog">
+        <Layout title="Blog" router={router}>
           <div className={styles.blog}>
             <div className={styles.blogheader}>
               <h1>

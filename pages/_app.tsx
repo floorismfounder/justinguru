@@ -11,7 +11,6 @@ import styles from '@/styles/app.module.scss';
 interface MyAppProps extends AppProps {
   title: string;
 }
-
 export default function App({ Component, pageProps, title }: MyAppProps) {
   const router = useRouter();
   const pageKey = router.asPath;
@@ -46,13 +45,13 @@ export default function App({ Component, pageProps, title }: MyAppProps) {
           rel="stylesheet"
         />
       </Head>
-        <div className={styles.app}>
-          <Header />
-          <AnimatePresence initial={false} mode="popLayout">
-            <Component key={pageKey} {...pageProps} />
-          </AnimatePresence>
-          <Footer />
-        </div>
+      <div className={styles.app}>
+        <Header router={router} />
+        <AnimatePresence initial={false} mode="popLayout">
+          <Component key={pageKey} {...pageProps} />
+        </AnimatePresence>
+        <Footer />
+      </div>
     </>
   );
 }
