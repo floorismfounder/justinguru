@@ -48,7 +48,7 @@ export default function App({ Component, pageProps, title }: MyAppProps) {
       </Head>
       <div className={styles.app}>
         <Header router={router} />
-        <AnimatePresence initial={false} mode='wait'>
+        <AnimatePresence initial={false} mode='sync'>
           <motion.div
             key={pageKey}
             initial={{ opacity: 0 }}

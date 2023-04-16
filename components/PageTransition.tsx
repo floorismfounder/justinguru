@@ -17,10 +17,10 @@ function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTra
   const handleExitComplete = () => setIsExiting(false);
 
   useEffect(() => {
-    if (isExiting) {
-      setTimeout(handleExitComplete, transition.duration * 1000);
-    }
-  }, [isExiting]);
+	if (isExiting) {
+	  setTimeout(handleExitComplete, transition.duration * 1000);
+	}
+  }, [isExiting, transition.duration]);
 
   return (
     <motion.div
