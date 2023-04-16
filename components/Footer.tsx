@@ -8,11 +8,11 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerupper}>
         <div className={styles.left}>
-          <h2>Need great software developed?</h2>
+          <h2>I come in peace. Let's be friends.</h2>
         </div>
         <div className={styles.right}>
           <Image src="/images/house.svg" className={styles.foothouse} alt="House of Bartlett" width={197} height={152} priority />
-          <button className={styles.button}>     
+          {/* <button className={styles.button}>     
             <Lottie
               options={{
                 animationData: require('../public/lotties/Mail_Send_lottie.json'),
@@ -21,7 +21,7 @@ export default function Footer() {
               height={54}
             />
             <span>Contact Justin Bartlett</span>
-          </button>
+          </button> */}
         </div>
       </div>
       <div className={styles.footermiddle}>

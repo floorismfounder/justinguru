@@ -16,8 +16,13 @@
             }
             .right {
                 img {
-                    margin: 0 auto 20px;
+                    // margin: 0 auto 20px;
+                    position: relative;
+                    top: -40px;
                     display: block;
+                    @media screen and (max-width: 768px) {
+                        top: -20px;
+                    }
                 }
             }
             h2 {
