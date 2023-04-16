@@ -6,10 +6,10 @@ import matter from 'gray-matter';
 import Layout from '@/components/Layout';
 import PageTransition from '@/components/PageTransition';
 import styles from '@/styles/blog.module.scss';
-import Image from 'next/image';
-import { forwardRef } from 'react';
-type IndexPageProps = {}
-type IndexPageRef = React.ForwardedRef<HTMLDivElement>
+import { forwardRef, useEffect } from 'react';
+
+type IndexPageProps = {};
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
 
 type BlogPostSummary = {
   slug: string;
@@ -24,44 +24,44 @@ type BlogProps = {
 };
 
 function Blog({ posts }: BlogProps, ref: IndexPageRef) {
+  useEffect(() => {
+    // Preload all thumbnail images
+    posts.forEach((post) => {
+      const img = new Image();
+      img.src = post.thumbnail;
+    });
+  }, [posts]);
+
   return (
     <>
       <PageTransition ref={ref}>
         <Layout title="Blog">
           <div className={styles.blog}>
             <div className={styles.blogheader}>
-              <h1>Justin&apos;s <span>Blog</span></h1>
+              <h1>
+                Justin&apos;s <span>Blog</span>
+              </h1>
             </div>
             <div className={styles.ulbg}>
               <ul>
-              {posts.map(({ slug, title, topic, thumbnail, date }) => (
-                <li key={slug}>
-                  <Link href={`/blog/${slug}`}>
-                    
-                    {thumbnail && 
-                        <Image
-                        className={styles.logoimg}
-                        src={thumbnail}
-                        alt={`Thumbnail for ${title}`}
-                        width={1310}
-                        height={860}
-                        priority
-                      />
-                    }
-                    <p>
-                      <span>
-                        {date}
-                      </span>
-                      <span>
-                        {topic}
-                      </span>
-                    </p>
-                    <h2>{title}</h2>
-                    
-                  </Link>
-                </li>
-              ))}
-
+                {posts.map(({ slug, title, topic, thumbnail, date }) => (
+                  <li key={slug}>
+                    <Link href={`/blog/${slug}`}>
+                      {thumbnail && (
+                        <img
+                          className={styles.logoimg}
+                          src={thumbnail}
+                          alt={`Thumbnail for ${title}`}
+                        />
+                      )}
+                      <p>
+                        <span>{date}</span>
+                        <span>{topic}</span>
+                      </p>
+                      <h2>{title}</h2>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

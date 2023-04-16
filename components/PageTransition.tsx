@@ -1,5 +1,7 @@
 import React, { forwardRef, useMemo, useEffect, useState } from 'react'
 import { motion, HTMLMotionProps } from 'framer-motion'
+import { useRouter } from 'next/router';
+
 
 type PageTransitionProps = HTMLMotionProps<'div'>
 type PageTransitionRef = React.ForwardedRef<HTMLDivElement>
@@ -7,6 +9,7 @@ type PageTransitionRef = React.ForwardedRef<HTMLDivElement>
 function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTransitionRef) {
 	const [isExiting, setIsExiting] = useState(false);
   
+	// const router = useRouter();
 	const onTheRight = { x: '100%' };
 	const inTheCenter = { x: 0 };
 	const onTheLeft = { x: '-100%'};
@@ -23,6 +26,7 @@ function PageTransition({ children, ...rest }: PageTransitionProps, ref: PageTra
   
 	return (
 	  <motion.div
+		// key={router.route}
 		ref={ref}
 		initial={onTheRight}
 		animate={inTheCenter}
