@@ -1,4 +1,4 @@
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -48,8 +48,15 @@ export default function App({ Component, pageProps, title }: MyAppProps) {
       </Head>
       <div className={styles.app}>
         <Header router={router} />
-        <AnimatePresence initial={false} mode="popLayout">
-          <Component key={pageKey} {...pageProps} />
+        <AnimatePresence initial={false} mode='wait'>
+          <motion.div
+            key={pageKey}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
         </AnimatePresence>
         <Footer />
       </div>

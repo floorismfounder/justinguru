@@ -30,6 +30,7 @@ function Home({}, ref: IndexPageRef) {
                     height={54}
                   />
                   <span>Contact Justin Bartlett</span>
+                  
                 </button>
               </div>
               <div className={styles.right}>
