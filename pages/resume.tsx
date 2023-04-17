@@ -126,6 +126,35 @@ return (
     <li>
       <div className={styles.job}>
         <div className={styles.left}>
+          <p>Principal Software Engineer</p>
+          <p>Capital One</p>
+          <p>Tysons Corner, VA</p>
+          <p>8/2015 - 01/2018</p>
+        </div>
+        <div className={styles.right}>
+          <ul>
+            <li>
+            Provided technology leadership and vision to the front-end leverage team
+            </li>
+            <li>
+            Led and mentored delivery of numerous projects, including Sign In Controller, Forgot PW, Enterprise Enrollment, and GovID Scan apps
+            </li>
+            <li>
+            Determined and created web standards, introduced front-end unit testing
+            </li>
+            <li>
+            Championed the use of a reusable component library, creating proof-of-concept apps for facial recognition and sign-in with Touch ID
+            </li>
+            <li>
+            Technologies used: Angular, AngularJS, React, Webpack, Gulp, Express, Node, MongoDB, Jenkins, Adobe CC, Sketch, InVision, Lottie, AWS, Karma, Jasmine, and Protractor
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div className={styles.job}>
+        <div className={styles.left}>
           <p>Senior UX Designer</p>
           <p>FINRA</p>
           <p>Rockville, MD</p>
