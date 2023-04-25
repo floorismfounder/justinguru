@@ -17,9 +17,9 @@ function Home({}, ref: IndexPageRef) {
           <div className={styles.twocolbg}>
             <div className={styles.twocol}>
               <div className={styles.left}>
-                <p className={styles.name}>🦄 Designer Developer Cloud AI Scrum</p>
+                <p className={styles.name}>Designer Developer</p>
                 {/* UX Dev Ops A/R AI CS@SP Quant</p> */}
-                <h1>Netscape Navigator</h1>
+                <h1>Technical Founder</h1>
                 <button className={styles.button}>
                   
                   <Lottie
@@ -129,7 +129,7 @@ function Home({}, ref: IndexPageRef) {
             </div>
           </div>
           <div className={styles.logos}>
-            <h3>I&apos;ve worked with these fine brands</h3>
+            <h3>I&apos;ve worked with these companies</h3>
             <ul>
               <li>
                 <Image src="/images/logos/capitalone.svg" alt="Capital One" width={224} height={80} className="capitalone" />

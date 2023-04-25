@@ -47,14 +47,14 @@ export default function Header({ router }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles.headercontainer}>
         <Link href="/" className={styles.logo} onClick={closeNav}>
-          <Image
+          {/* <Image
             className={styles.logoimg}
             src="/images/justinface3.svg"
             alt="Justin Bartlett and Peter Bartlett"
             width={56}
             height={80}
             priority
-          />
+          /> */}
           <span>
             Justin.<span className={styles.guru}>guru</span>
           </span>
