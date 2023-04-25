@@ -9,7 +9,7 @@ import { NextRouter } from 'next/router'
 const navLinks = [
   // { href: '/', label: 'Home' },
   { href: '/resume', label: 'Resume' },
-  { href: '/blog', label: 'Blog' },
+  // { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 

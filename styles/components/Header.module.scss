@@ -22,7 +22,6 @@
       display: flex;
       align-items: center;
       color: #fff;
-      z-index: 7;
       span.guru {
         opacity: 0.5;
         margin-left: 4px;
@@ -41,7 +40,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // padding: 0;
+        padding: 0;
         margin: 0;
         list-style: none;
         li {
@@ -95,131 +94,130 @@
           display: none;
         }
       }
-    }
-  }
-  nav {
-    .navicon {
-      position: absolute;
-      top: 33px;
-      right: 30px;
-      display: block;
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out;
-      width: 48px;
-      height: 48px;
-      z-index: 6;
-      // opacity: 80%;
-    }
-    .navicon span {
-      display: block;
-      position: absolute;
-      height: 4px;
-      width: 50%;
-      background: rgb(198, 198, 198);
-      opacity: 1;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .25s ease-in-out;
-      -moz-transition: .25s ease-in-out;
-      -o-transition: .25s ease-in-out;
-      transition: .25s ease-in-out;
-    }
-    
-    .navicon span:nth-child(even) {
-      left: 50%;
-      border-radius: 0 9px 9px 0;
-    }
-    
-    .navicon span:nth-child(odd) {
-      left:0px;
-      border-radius: 9px 0 0 9px;
-    }
-    
-    .navicon span:nth-child(1), .navicon span:nth-child(2) {
-      top: 0px;
-    }
-    
-    .navicon span:nth-child(3), .navicon span:nth-child(4) {
-      top: 14px;
-    }
-    
-    .navicon span:nth-child(5), .navicon span:nth-child(6) {
-      top: 28px;
-    }
-    
-    .navicon.active span:nth-child(1),.navicon.active span:nth-child(6) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-    
-    .navicon.active span:nth-child(2),.navicon.active span:nth-child(5) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-    }
-    
-    .navicon.active span:nth-child(1) {
-      left: 5px;
-      top: 6px;
-    }
-    
-    .navicon.active span:nth-child(2) {
-      left: calc(50% - 5px);
-      top: 6px;
-    }
-    
-    .navicon.active span:nth-child(3) {
-      left: -50%;
-      opacity: 0;
-    }
-    
-    .navicon.active span:nth-child(4) {
-      left: 100%;
-      opacity: 0;
-    }
-    
-    .navicon.active span:nth-child(5) {
-      left: 5px;
-      top: 19px;
-    }
-    
-    .navicon.active span:nth-child(6) {
-      left: calc(50% - 5px);
-      top: 19px;
-    }
-    ul.navul {
-      z-index: -1;
-      background: rgb(18,18,18);
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top:0;
-      left: -100vw;
-      flex-direction: column;
-      padding: 20vh 0;
-      display: flex;
-      // display: none;
-      opacity: 1;
-      transition: left .6s ease-in-out;
-      &.active {
-        z-index: 3;
-        display: flex;
-        opacity: 1;
-        left: 0;
+      nav {
+        .navicon {
+          position: absolute;
+          top: 33px;
+          right: 30px;
+          display: block;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+          width: 48px;
+          height: 48px;
+          z-index: 6;
+          // opacity: 80%;
+        }
+        .navicon span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 50%;
+          background: rgb(198, 198, 198);
+          opacity: 1;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: .25s ease-in-out;
+          -moz-transition: .25s ease-in-out;
+          -o-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+        }
         
-      }
-      li {
-        margin: 0 6px;
-        font-size: 24px;
+        .navicon span:nth-child(even) {
+          left: 50%;
+          border-radius: 0 9px 9px 0;
+        }
+        
+        .navicon span:nth-child(odd) {
+          left:0px;
+          border-radius: 9px 0 0 9px;
+        }
+        
+        .navicon span:nth-child(1), .navicon span:nth-child(2) {
+          top: 0px;
+        }
+        
+        .navicon span:nth-child(3), .navicon span:nth-child(4) {
+          top: 14px;
+        }
+        
+        .navicon span:nth-child(5), .navicon span:nth-child(6) {
+          top: 28px;
+        }
+        
+        .navicon.active span:nth-child(1),.navicon.active span:nth-child(6) {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        
+        .navicon.active span:nth-child(2),.navicon.active span:nth-child(5) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        
+        .navicon.active span:nth-child(1) {
+          left: 5px;
+          top: 6px;
+        }
+        
+        .navicon.active span:nth-child(2) {
+          left: calc(50% - 5px);
+          top: 6px;
+        }
+        
+        .navicon.active span:nth-child(3) {
+          left: -50%;
+          opacity: 0;
+        }
+        
+        .navicon.active span:nth-child(4) {
+          left: 100%;
+          opacity: 0;
+        }
+        
+        .navicon.active span:nth-child(5) {
+          left: 5px;
+          top: 19px;
+        }
+        
+        .navicon.active span:nth-child(6) {
+          left: calc(50% - 5px);
+          top: 19px;
+        }
+        ul.navul {
+          z-index: -1;
+          background: rgb(18,18,18);
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          top:0;
+          left: -100vw;
+          flex-direction: column;
+          padding: 20vh 0;
+          // display: none;
+          opacity: 1;
+          transition: left .3s ease-in-out;
+          &.active {
+            z-index: 3;
+            display: flex;
+            opacity: 1;
+            left: 0;
+            
+          }
+          li {
+            margin: 0 6px;
+            font-size: 24px;
+          }
+        }
       }
     }
-  }
     
+  }
   
 
 

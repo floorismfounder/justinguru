@@ -129,7 +129,7 @@ function Home({}, ref: IndexPageRef) {
             </div>
           </div>
           <div className={styles.logos}>
-            <h3>I&apos;ve worked with these companies</h3>
+            <h3>I&apos;ve worked with these organizations</h3>
             <ul>
               <li>
                 <Image src="/images/logos/capitalone.svg" alt="Capital One" width={224} height={80} className="capitalone" />

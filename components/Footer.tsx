@@ -11,9 +11,9 @@ export default function Footer() {
         <Image src="/images/house.svg" className={styles.foothouse} alt="House of Bartlett" width={197} height={152} priority />
         </div>
         <div className={styles.right}>
-        <h2>And I can work for you too</h2>
+        <h2>And I can work with you too</h2>
           
-          <button className={styles.button}>     
+          {/* <button className={styles.button}>     
             <Lottie
               options={{
                 animationData: require('../public/lotties/Mail_Send_lottie.json'),
@@ -22,7 +22,7 @@ export default function Footer() {
               height={54}
             />
             <span>Contact Justin Bartlett</span>
-          </button>
+          </button> */}
         </div>
       </div>
       <div className={styles.footermiddle}>
