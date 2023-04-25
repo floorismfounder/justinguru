@@ -20,7 +20,7 @@ function Home({}, ref: IndexPageRef) {
                 <p className={styles.name}>Designer Developer</p>
                 {/* UX Dev Ops A/R AI CS@SP Quant</p> */}
                 <h1>Technical Founder</h1>
-                <button className={styles.button}>
+                <a className={styles.button} href="mailto:justin@floorism.com">
                   
                   <Lottie
                     options={{
@@ -31,7 +31,7 @@ function Home({}, ref: IndexPageRef) {
                   />
                   <span>Contact Justin Bartlett</span>
                   
-                </button>
+                </a>
               </div>
               <div className={styles.right}>
                 <div className={styles.heroimg}>
@@ -74,7 +74,7 @@ function Home({}, ref: IndexPageRef) {
                 </div>
               </div>
             </div>
-            <button className={styles.buttonmobile}>
+            <a className={styles.buttonmobile} href="mailto:justin@floorism.com">
               <Lottie
                 options={{
                   animationData: require('../public/lotties/Mail_Send_lottie.json'),
@@ -83,7 +83,7 @@ function Home({}, ref: IndexPageRef) {
                 height={54}
               />
               <span>Contact Justin Bartlett</span>
-            </button>  
+            </a>  
           </div>
           <div className={styles.threecolbg}>
             <div className={styles.threecol}>
